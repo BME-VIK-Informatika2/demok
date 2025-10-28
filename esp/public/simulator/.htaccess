@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+   <IfModule mod_negotiation.c>
+       Options -MultiViews -Indexes +FollowSymLinks
+   </IfModule>
+
+   RewriteEngine On
+
+   # Redirect Trailing Slashes If Not A Folder...
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_URI} (.+)/$
+   RewriteRule ^ %1 [L,R=301]
+
+   # Handle UI...
+   RewriteRule ^$ index.html [L]
+
+   # No Rewrite For Existing Files...
+   RewriteCond %{REQUEST_FILENAME} -f
+   RewriteRule ^ - [L]
+
+   # Send Requests To Front Controller...
+   RewriteCond %{REQUEST_URI} !simulator.php
+   RewriteRule ^(.*)$ simulator.php?q=$1 [L,QSA]
+
+</IfModule>

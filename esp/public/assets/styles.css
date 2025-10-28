@@ -1,0 +1,71 @@
+#dashboard {
+    display: none;
+}
+
+.monitor-panel .card-body {
+    position: relative;
+    height: 300px;
+    padding: 10px;
+}
+
+.control-panel {
+    display: flex;
+}
+
+.btn-light {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    --bs-btn-color: var(--main-color);
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-disabled-color: var(--main-color);
+    --bs-btn-border-color: var(--border-color);
+    --bs-btn-hover-border-color: var(--border-color);
+    --bs-btn-active-border-color: var(--border-color);
+    --bs-btn-disabled-border-color: var(--border-color);
+}
+
+.btn-light-on {
+    border-radius: 0px 10px 10px 0px;
+    --border-color: gray;
+}
+
+.btn-light-off {
+    border-radius: 10px 0px 0px 10px;
+    --border-color: gray;
+    --main-color: #caccd2;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+
+.btn-light-led .btn-light-on{
+    --main-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+
+.btn-light-rgb .btn-light-on{
+    --main-color: #ffc107;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+
+.chart-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.form-control-color{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: gray;
+}
+
+.form-select{
+    width: auto;
+}
