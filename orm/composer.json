@@ -1,0 +1,13 @@
+{
+    "name": "info2/orm",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Knyihár Gábor",
+            "email": "gabor.knyihar@aut.bme.hu"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^12.37"
+    }
+}
